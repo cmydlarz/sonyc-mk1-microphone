@@ -1,0 +1,188 @@
+use <threads.scad>;
+use <boxes.scad>;
+
+module mic_mount() {
+
+columns = 500;
+tube_len = 50;
+b_len = 2;
+b_len = 0;
+b_peg_len = 2;
+b_peg_len = 2;
+t_peg_len = 2.5;
+b_peg_r = 2.4;
+t_peg_r = 1.675;
+vent_rot = 6;
+ang_shift = 5;
+//b_len = 2;
+port_h = 40;
+port_r = 6;
+port_h = 37;
+
+
+
+translate([7,0,12]) {
+	difference(){
+		english_thread(5/8, 27, 0.55);
+		cylinder(h = tube_len, r1 = 5.5,  r2 = 5.5, $fn = columns);
+	}
+}
+
+
+difference(){
+	//translate([0,0,25+b_len]) {
+//		difference(){
+//			cylinder(h = 20, r1 = 8,  r2 = 20, $fn = columns);
+//			cylinder(h = 20, r1 = 5.5,  r2 = 10, $fn = columns);
+//		}	
+//	}
+
+//thinning_cone_r_b = 10;
+
+//thinning_cone_r_t = thinning_cone_r_b/2;
+
+	rotate ([0,0,180]){
+		translate([-12,0,35+b_len]){
+			// Thining cyclinder
+			//translate([-pegpos + 3, 0, 0])
+			//cylinder(h = 20, r1 = 10,  r2 = 10, $fn = columns);
+
+			difference(){
+				//translate([-pegpos + 3, 0, 0])
+				//cylinder(h = 20, r1 = 15,  r2 = 10, $fn = columns);
+				linear_extrude(height = 20, center = true, convexity = columns, scale=2.47){
+					
+					translate([ang_shift, 0, 0])
+						circle(r = 8, $fn = 100);
+						
+						
+				}
+				linear_extrude(height = 20, center = true, convexity = columns, scale=2.4){
+					
+					translate([ang_shift, 0, 0])
+						
+						circle(r = 5, $fn = 100);
+						
+				}
+			}
+		}
+	}
+	translate([7,0,42]) {
+		//roundedBox([12, 13, 15], 0, true, columns);
+		roundedBox([10, 13, 7], 0, true, columns);
+	}
+
+
+
+	
+	//translate([0,0,35]) {
+//		rotate ([0,90,-15+vent_rot]) {scale([1.0,0.5,1.0]){cylinder (h = port_h, r=port_r, $fn=100);}}
+//	}
+	translate([0,0,port_h]) {
+		rotate ([0,90,15+vent_rot]) {scale([1.0,0.5,1.0]){cylinder (h = port_h, r=port_r, $fn=100);}}
+	}
+	translate([0,0,port_h]) {
+		rotate ([0,90,60+vent_rot]) {scale([1.0,0.5,1.0]){cylinder (h = port_h, r=port_r, center = true,  $fn=100);}}
+	}
+
+	translate([0,0,port_h]) {
+		rotate ([0,90,105+vent_rot]) {scale([1.0,0.5,1.0]){cylinder (h = port_h, r=port_r, center = true,  $fn=100);}}
+	}
+	translate([0,0,port_h]) {
+		rotate ([0,90,-30+vent_rot]) {scale([1.0,0.5,1.0]){cylinder (h = port_h, r=port_r,  $fn=100);}}
+	}
+
+}
+
+
+difference(){
+translate([0,0,45+b_len]) {
+difference(){
+		cylinder(h = 30, r1 = 20,  r2 = 10, $fn = columns);
+		cylinder(h = 30, r1 = 16,  r2 = 10, $fn = columns);
+	}
+}
+
+translate([10,0,42]) {
+	roundedBox([50, 50, 70], 0, true, columns);
+	//roundedBox([7, 13, 7], 0, true, columns);
+}
+
+}
+
+
+difference(){
+
+translate([0,0,50]) {
+difference(){
+		//cylinder(h = b_len, r1 = 20,  r2 = 20, $fn = columns);
+		//cylinder(h = b_len, r1 = 14,  r2 = 9, $fn = columns);
+	}
+}
+
+
+
+}
+
+
+pegneg = 9.5;
+pegpos = -9.5;
+pegshift = -1.0;
+
+translate([pegshift,0,0]){
+translate([pegpos,pegpos,45+b_len]) {
+	cylinder(h = b_peg_len, r1 = b_peg_r,  r2 = b_peg_r, $fn = columns);
+	sphere(b_peg_r, $fn=100);
+}
+
+
+translate([pegpos,pegpos,45+b_len+b_peg_len]) {
+	//english_thread(0.1120, 40, 0.11811);
+	cylinder(h = t_peg_len, r1 = t_peg_r,  r2 = t_peg_r, $fn = columns);
+}
+
+
+
+
+translate([pegneg,pegneg,45+b_len]) {
+	cylinder(h = b_peg_len, r1 = b_peg_r,  r2 = b_peg_r, $fn = columns);
+	sphere(b_peg_r, $fn=100);
+}
+
+translate([pegneg,pegneg,45+b_len+b_peg_len]) {
+	//english_thread(0.1120, 40, 0.11811);
+	cylinder(h = t_peg_len, r1 = t_peg_r,  r2 = t_peg_r, $fn = columns);
+	
+}
+
+
+
+translate([pegneg,pegpos,45+b_len]) {
+	cylinder(h = b_peg_len, r1 = b_peg_r,  r2 = b_peg_r, $fn = columns);
+	sphere(b_peg_r, $fn=100);
+}
+
+translate([pegneg,pegpos,45+b_len+b_peg_len]) {
+	//english_thread(0.1120, 40, 0.11811);
+	cylinder(h = t_peg_len, r1 = t_peg_r,  r2 = t_peg_r, $fn = columns);
+	
+}
+
+
+
+translate([pegpos,pegneg,45+b_len]) {
+	cylinder(h = b_peg_len, r1 = b_peg_r,  r2 = b_peg_r, $fn = columns);
+	sphere(b_peg_r, $fn=100);
+}
+
+translate([pegpos,pegneg,45+b_len+b_peg_len]) {
+	//english_thread(0.1120, 40, 0.11811);
+	cylinder(h = t_peg_len, r1 = t_peg_r,  r2 = t_peg_r, $fn = columns);
+	
+}
+}
+
+}
+
+
+mic_mount();

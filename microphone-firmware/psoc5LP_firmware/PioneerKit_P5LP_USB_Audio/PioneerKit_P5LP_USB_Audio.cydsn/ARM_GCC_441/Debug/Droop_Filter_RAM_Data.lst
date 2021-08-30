@@ -1,0 +1,2185 @@
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 6
+  11              		.eabi_attribute 18, 4
+  12              		.thumb
+  13              		.file	"Droop_Filter_RAM_Data.c"
+  14              		.section	.debug_abbrev,"",%progbits
+  15              	.Ldebug_abbrev0:
+  16              		.section	.debug_info,"",%progbits
+  17              	.Ldebug_info0:
+  18              		.section	.debug_line,"",%progbits
+  19              	.Ldebug_line0:
+  20 0000 74000000 		.text
+  20      02006E00 
+  20      00000201 
+  20      FB0E0D00 
+  20      01010101 
+  21              	.Ltext0:
+  22              		.cfi_sections	.debug_frame
+  23              		.global	Droop_Filter_control
+  24              		.section	.rodata
+  25              		.align	2
+  26              		.type	Droop_Filter_control, %object
+  27              		.size	Droop_Filter_control, 256
+  28              	Droop_Filter_control:
+  29 0000 20       		.byte	32
+  30 0001 13       		.byte	19
+  31 0002 00       		.byte	0
+  32 0003 25       		.byte	37
+  33 0004 61       		.byte	97
+  34 0005 17       		.byte	23
+  35 0006 80       		.byte	-128
+  36 0007 26       		.byte	38
+  37 0008 01       		.byte	1
+  38 0009 00       		.byte	0
+  39 000a 80       		.byte	-128
+  40 000b 26       		.byte	38
+  41 000c 01       		.byte	1
+  42 000d 00       		.byte	0
+  43 000e 80       		.byte	-128
+  44 000f 26       		.byte	38
+  45 0010 01       		.byte	1
+  46 0011 00       		.byte	0
+  47 0012 80       		.byte	-128
+  48 0013 26       		.byte	38
+  49 0014 20       		.byte	32
+  50 0015 13       		.byte	19
+  51 0016 80       		.byte	-128
+  52 0017 26       		.byte	38
+  53 0018 C2       		.byte	-62
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 2
+
+
+  54 0019 0C       		.byte	12
+  55 001a 80       		.byte	-128
+  56 001b 26       		.byte	38
+  57 001c E0       		.byte	-32
+  58 001d 0E       		.byte	14
+  59 001e 80       		.byte	-128
+  60 001f 26       		.byte	38
+  61 0020 A4       		.byte	-92
+  62 0021 0A       		.byte	10
+  63 0022 80       		.byte	-128
+  64 0023 26       		.byte	38
+  65 0024 63       		.byte	99
+  66 0025 17       		.byte	23
+  67 0026 10       		.byte	16
+  68 0027 06       		.byte	6
+  69 0028 8C       		.byte	-116
+  70 0029 08       		.byte	8
+  71 002a 80       		.byte	-128
+  72 002b 26       		.byte	38
+  73 002c 6E       		.byte	110
+  74 002d 06       		.byte	6
+  75 002e 80       		.byte	-128
+  76 002f 6D       		.byte	109
+  77 0030 6C       		.byte	108
+  78 0031 06       		.byte	6
+  79 0032 80       		.byte	-128
+  80 0033 2F       		.byte	47
+  81 0034 20       		.byte	32
+  82 0035 02       		.byte	2
+  83 0036 10       		.byte	16
+  84 0037 6F       		.byte	111
+  85 0038 00       		.byte	0
+  86 0039 80       		.byte	-128
+  87 003a 80       		.byte	-128
+  88 003b 26       		.byte	38
+  89 003c 20       		.byte	32
+  90 003d 02       		.byte	2
+  91 003e 80       		.byte	-128
+  92 003f 6F       		.byte	111
+  93 0040 00       		.byte	0
+  94 0041 80       		.byte	-128
+  95 0042 80       		.byte	-128
+  96 0043 26       		.byte	38
+  97 0044 20       		.byte	32
+  98 0045 02       		.byte	2
+  99 0046 80       		.byte	-128
+ 100 0047 6F       		.byte	111
+ 101 0048 20       		.byte	32
+ 102 0049 02       		.byte	2
+ 103 004a 80       		.byte	-128
+ 104 004b 6F       		.byte	111
+ 105 004c 21       		.byte	33
+ 106 004d 1A       		.byte	26
+ 107 004e 40       		.byte	64
+ 108 004f FE       		.byte	-2
+ 109 0050 00       		.byte	0
+ 110 0051 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 3
+
+
+ 111 0052 87       		.byte	-121
+ 112 0053 26       		.byte	38
+ 113 0054 02       		.byte	2
+ 114 0055 22       		.byte	34
+ 115 0056 10       		.byte	16
+ 116 0057 66       		.byte	102
+ 117 0058 00       		.byte	0
+ 118 0059 80       		.byte	-128
+ 119 005a 10       		.byte	16
+ 120 005b 6E       		.byte	110
+ 121 005c 01       		.byte	1
+ 122 005d 82       		.byte	-126
+ 123 005e 80       		.byte	-128
+ 124 005f 26       		.byte	38
+ 125 0060 E6       		.byte	-26
+ 126 0061 0E       		.byte	14
+ 127 0062 80       		.byte	-128
+ 128 0063 26       		.byte	38
+ 129 0064 C8       		.byte	-56
+ 130 0065 0C       		.byte	12
+ 131 0066 80       		.byte	-128
+ 132 0067 26       		.byte	38
+ 133 0068 00       		.byte	0
+ 134 0069 00       		.byte	0
+ 135 006a 80       		.byte	-128
+ 136 006b 06       		.byte	6
+ 137 006c 6B       		.byte	107
+ 138 006d 87       		.byte	-121
+ 139 006e 18       		.byte	24
+ 140 006f 6D       		.byte	109
+ 141 0070 6A       		.byte	106
+ 142 0071 09       		.byte	9
+ 143 0072 18       		.byte	24
+ 144 0073 3E       		.byte	62
+ 145 0074 00       		.byte	0
+ 146 0075 00       		.byte	0
+ 147 0076 80       		.byte	-128
+ 148 0077 26       		.byte	38
+ 149 0078 01       		.byte	1
+ 150 0079 20       		.byte	32
+ 151 007a 80       		.byte	-128
+ 152 007b 26       		.byte	38
+ 153 007c 21       		.byte	33
+ 154 007d 02       		.byte	2
+ 155 007e 18       		.byte	24
+ 156 007f 7F       		.byte	127
+ 157 0080 00       		.byte	0
+ 158 0081 00       		.byte	0
+ 159 0082 00       		.byte	0
+ 160 0083 00       		.byte	0
+ 161 0084 00       		.byte	0
+ 162 0085 00       		.byte	0
+ 163 0086 00       		.byte	0
+ 164 0087 00       		.byte	0
+ 165 0088 00       		.byte	0
+ 166 0089 00       		.byte	0
+ 167 008a 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 4
+
+
+ 168 008b 00       		.byte	0
+ 169 008c 00       		.byte	0
+ 170 008d 00       		.byte	0
+ 171 008e 00       		.byte	0
+ 172 008f 00       		.byte	0
+ 173 0090 00       		.byte	0
+ 174 0091 00       		.byte	0
+ 175 0092 00       		.byte	0
+ 176 0093 00       		.byte	0
+ 177 0094 00       		.byte	0
+ 178 0095 00       		.byte	0
+ 179 0096 00       		.byte	0
+ 180 0097 00       		.byte	0
+ 181 0098 00       		.byte	0
+ 182 0099 00       		.byte	0
+ 183 009a 00       		.byte	0
+ 184 009b 00       		.byte	0
+ 185 009c 00       		.byte	0
+ 186 009d 00       		.byte	0
+ 187 009e 00       		.byte	0
+ 188 009f 00       		.byte	0
+ 189 00a0 00       		.byte	0
+ 190 00a1 00       		.byte	0
+ 191 00a2 00       		.byte	0
+ 192 00a3 00       		.byte	0
+ 193 00a4 00       		.byte	0
+ 194 00a5 00       		.byte	0
+ 195 00a6 00       		.byte	0
+ 196 00a7 00       		.byte	0
+ 197 00a8 00       		.byte	0
+ 198 00a9 00       		.byte	0
+ 199 00aa 00       		.byte	0
+ 200 00ab 00       		.byte	0
+ 201 00ac 00       		.byte	0
+ 202 00ad 00       		.byte	0
+ 203 00ae 00       		.byte	0
+ 204 00af 00       		.byte	0
+ 205 00b0 00       		.byte	0
+ 206 00b1 00       		.byte	0
+ 207 00b2 00       		.byte	0
+ 208 00b3 00       		.byte	0
+ 209 00b4 00       		.byte	0
+ 210 00b5 00       		.byte	0
+ 211 00b6 00       		.byte	0
+ 212 00b7 00       		.byte	0
+ 213 00b8 00       		.byte	0
+ 214 00b9 00       		.byte	0
+ 215 00ba 00       		.byte	0
+ 216 00bb 00       		.byte	0
+ 217 00bc 00       		.byte	0
+ 218 00bd 00       		.byte	0
+ 219 00be 00       		.byte	0
+ 220 00bf 00       		.byte	0
+ 221 00c0 00       		.byte	0
+ 222 00c1 00       		.byte	0
+ 223 00c2 00       		.byte	0
+ 224 00c3 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 5
+
+
+ 225 00c4 00       		.byte	0
+ 226 00c5 00       		.byte	0
+ 227 00c6 00       		.byte	0
+ 228 00c7 00       		.byte	0
+ 229 00c8 00       		.byte	0
+ 230 00c9 00       		.byte	0
+ 231 00ca 00       		.byte	0
+ 232 00cb 00       		.byte	0
+ 233 00cc 00       		.byte	0
+ 234 00cd 00       		.byte	0
+ 235 00ce 00       		.byte	0
+ 236 00cf 00       		.byte	0
+ 237 00d0 00       		.byte	0
+ 238 00d1 00       		.byte	0
+ 239 00d2 00       		.byte	0
+ 240 00d3 00       		.byte	0
+ 241 00d4 00       		.byte	0
+ 242 00d5 00       		.byte	0
+ 243 00d6 00       		.byte	0
+ 244 00d7 00       		.byte	0
+ 245 00d8 00       		.byte	0
+ 246 00d9 00       		.byte	0
+ 247 00da 00       		.byte	0
+ 248 00db 00       		.byte	0
+ 249 00dc 00       		.byte	0
+ 250 00dd 00       		.byte	0
+ 251 00de 00       		.byte	0
+ 252 00df 00       		.byte	0
+ 253 00e0 00       		.byte	0
+ 254 00e1 00       		.byte	0
+ 255 00e2 00       		.byte	0
+ 256 00e3 00       		.byte	0
+ 257 00e4 00       		.byte	0
+ 258 00e5 00       		.byte	0
+ 259 00e6 00       		.byte	0
+ 260 00e7 00       		.byte	0
+ 261 00e8 00       		.byte	0
+ 262 00e9 00       		.byte	0
+ 263 00ea 00       		.byte	0
+ 264 00eb 00       		.byte	0
+ 265 00ec 00       		.byte	0
+ 266 00ed 00       		.byte	0
+ 267 00ee 00       		.byte	0
+ 268 00ef 00       		.byte	0
+ 269 00f0 00       		.byte	0
+ 270 00f1 00       		.byte	0
+ 271 00f2 00       		.byte	0
+ 272 00f3 00       		.byte	0
+ 273 00f4 00       		.byte	0
+ 274 00f5 00       		.byte	0
+ 275 00f6 00       		.byte	0
+ 276 00f7 00       		.byte	0
+ 277 00f8 00       		.byte	0
+ 278 00f9 00       		.byte	0
+ 279 00fa 00       		.byte	0
+ 280 00fb 00       		.byte	0
+ 281 00fc 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 6
+
+
+ 282 00fd 00       		.byte	0
+ 283 00fe 00       		.byte	0
+ 284 00ff 00       		.byte	0
+ 285              		.global	Droop_Filter_data_a
+ 286              		.align	2
+ 287              		.type	Droop_Filter_data_a, %object
+ 288              		.size	Droop_Filter_data_a, 512
+ 289              	Droop_Filter_data_a:
+ 290 0100 00       		.byte	0
+ 291 0101 00       		.byte	0
+ 292 0102 00       		.byte	0
+ 293 0103 00       		.byte	0
+ 294 0104 00       		.byte	0
+ 295 0105 00       		.byte	0
+ 296 0106 00       		.byte	0
+ 297 0107 00       		.byte	0
+ 298 0108 00       		.byte	0
+ 299 0109 00       		.byte	0
+ 300 010a 00       		.byte	0
+ 301 010b 00       		.byte	0
+ 302 010c 00       		.byte	0
+ 303 010d 00       		.byte	0
+ 304 010e 00       		.byte	0
+ 305 010f 00       		.byte	0
+ 306 0110 00       		.byte	0
+ 307 0111 00       		.byte	0
+ 308 0112 00       		.byte	0
+ 309 0113 00       		.byte	0
+ 310 0114 00       		.byte	0
+ 311 0115 00       		.byte	0
+ 312 0116 00       		.byte	0
+ 313 0117 00       		.byte	0
+ 314 0118 00       		.byte	0
+ 315 0119 00       		.byte	0
+ 316 011a 00       		.byte	0
+ 317 011b 00       		.byte	0
+ 318 011c 00       		.byte	0
+ 319 011d 00       		.byte	0
+ 320 011e 00       		.byte	0
+ 321 011f 00       		.byte	0
+ 322 0120 00       		.byte	0
+ 323 0121 00       		.byte	0
+ 324 0122 00       		.byte	0
+ 325 0123 00       		.byte	0
+ 326 0124 00       		.byte	0
+ 327 0125 00       		.byte	0
+ 328 0126 00       		.byte	0
+ 329 0127 00       		.byte	0
+ 330 0128 00       		.byte	0
+ 331 0129 00       		.byte	0
+ 332 012a 00       		.byte	0
+ 333 012b 00       		.byte	0
+ 334 012c 00       		.byte	0
+ 335 012d 00       		.byte	0
+ 336 012e 00       		.byte	0
+ 337 012f 00       		.byte	0
+ 338 0130 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 7
+
+
+ 339 0131 00       		.byte	0
+ 340 0132 00       		.byte	0
+ 341 0133 00       		.byte	0
+ 342 0134 00       		.byte	0
+ 343 0135 00       		.byte	0
+ 344 0136 00       		.byte	0
+ 345 0137 00       		.byte	0
+ 346 0138 00       		.byte	0
+ 347 0139 00       		.byte	0
+ 348 013a 00       		.byte	0
+ 349 013b 00       		.byte	0
+ 350 013c 00       		.byte	0
+ 351 013d 00       		.byte	0
+ 352 013e 00       		.byte	0
+ 353 013f 00       		.byte	0
+ 354 0140 00       		.byte	0
+ 355 0141 00       		.byte	0
+ 356 0142 00       		.byte	0
+ 357 0143 00       		.byte	0
+ 358 0144 00       		.byte	0
+ 359 0145 00       		.byte	0
+ 360 0146 00       		.byte	0
+ 361 0147 00       		.byte	0
+ 362 0148 00       		.byte	0
+ 363 0149 00       		.byte	0
+ 364 014a 00       		.byte	0
+ 365 014b 00       		.byte	0
+ 366 014c 00       		.byte	0
+ 367 014d 00       		.byte	0
+ 368 014e 00       		.byte	0
+ 369 014f 00       		.byte	0
+ 370 0150 00       		.byte	0
+ 371 0151 00       		.byte	0
+ 372 0152 00       		.byte	0
+ 373 0153 00       		.byte	0
+ 374 0154 00       		.byte	0
+ 375 0155 00       		.byte	0
+ 376 0156 00       		.byte	0
+ 377 0157 00       		.byte	0
+ 378 0158 00       		.byte	0
+ 379 0159 00       		.byte	0
+ 380 015a 00       		.byte	0
+ 381 015b 00       		.byte	0
+ 382 015c 00       		.byte	0
+ 383 015d 00       		.byte	0
+ 384 015e 00       		.byte	0
+ 385 015f 00       		.byte	0
+ 386 0160 00       		.byte	0
+ 387 0161 00       		.byte	0
+ 388 0162 00       		.byte	0
+ 389 0163 00       		.byte	0
+ 390 0164 00       		.byte	0
+ 391 0165 00       		.byte	0
+ 392 0166 00       		.byte	0
+ 393 0167 00       		.byte	0
+ 394 0168 00       		.byte	0
+ 395 0169 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 8
+
+
+ 396 016a 00       		.byte	0
+ 397 016b 00       		.byte	0
+ 398 016c 00       		.byte	0
+ 399 016d 00       		.byte	0
+ 400 016e 00       		.byte	0
+ 401 016f 00       		.byte	0
+ 402 0170 00       		.byte	0
+ 403 0171 00       		.byte	0
+ 404 0172 00       		.byte	0
+ 405 0173 00       		.byte	0
+ 406 0174 00       		.byte	0
+ 407 0175 00       		.byte	0
+ 408 0176 00       		.byte	0
+ 409 0177 00       		.byte	0
+ 410 0178 00       		.byte	0
+ 411 0179 00       		.byte	0
+ 412 017a 00       		.byte	0
+ 413 017b 00       		.byte	0
+ 414 017c 00       		.byte	0
+ 415 017d 00       		.byte	0
+ 416 017e 00       		.byte	0
+ 417 017f 00       		.byte	0
+ 418 0180 00       		.byte	0
+ 419 0181 00       		.byte	0
+ 420 0182 00       		.byte	0
+ 421 0183 00       		.byte	0
+ 422 0184 00       		.byte	0
+ 423 0185 00       		.byte	0
+ 424 0186 00       		.byte	0
+ 425 0187 00       		.byte	0
+ 426 0188 00       		.byte	0
+ 427 0189 00       		.byte	0
+ 428 018a 00       		.byte	0
+ 429 018b 00       		.byte	0
+ 430 018c 00       		.byte	0
+ 431 018d 00       		.byte	0
+ 432 018e 00       		.byte	0
+ 433 018f 00       		.byte	0
+ 434 0190 00       		.byte	0
+ 435 0191 00       		.byte	0
+ 436 0192 00       		.byte	0
+ 437 0193 00       		.byte	0
+ 438 0194 00       		.byte	0
+ 439 0195 00       		.byte	0
+ 440 0196 00       		.byte	0
+ 441 0197 00       		.byte	0
+ 442 0198 00       		.byte	0
+ 443 0199 00       		.byte	0
+ 444 019a 00       		.byte	0
+ 445 019b 00       		.byte	0
+ 446 019c 00       		.byte	0
+ 447 019d 00       		.byte	0
+ 448 019e 00       		.byte	0
+ 449 019f 00       		.byte	0
+ 450 01a0 00       		.byte	0
+ 451 01a1 00       		.byte	0
+ 452 01a2 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 9
+
+
+ 453 01a3 00       		.byte	0
+ 454 01a4 00       		.byte	0
+ 455 01a5 00       		.byte	0
+ 456 01a6 00       		.byte	0
+ 457 01a7 00       		.byte	0
+ 458 01a8 00       		.byte	0
+ 459 01a9 00       		.byte	0
+ 460 01aa 00       		.byte	0
+ 461 01ab 00       		.byte	0
+ 462 01ac 00       		.byte	0
+ 463 01ad 00       		.byte	0
+ 464 01ae 00       		.byte	0
+ 465 01af 00       		.byte	0
+ 466 01b0 00       		.byte	0
+ 467 01b1 00       		.byte	0
+ 468 01b2 00       		.byte	0
+ 469 01b3 00       		.byte	0
+ 470 01b4 00       		.byte	0
+ 471 01b5 00       		.byte	0
+ 472 01b6 00       		.byte	0
+ 473 01b7 00       		.byte	0
+ 474 01b8 00       		.byte	0
+ 475 01b9 00       		.byte	0
+ 476 01ba 00       		.byte	0
+ 477 01bb 00       		.byte	0
+ 478 01bc 00       		.byte	0
+ 479 01bd 00       		.byte	0
+ 480 01be 00       		.byte	0
+ 481 01bf 00       		.byte	0
+ 482 01c0 00       		.byte	0
+ 483 01c1 00       		.byte	0
+ 484 01c2 00       		.byte	0
+ 485 01c3 00       		.byte	0
+ 486 01c4 00       		.byte	0
+ 487 01c5 00       		.byte	0
+ 488 01c6 00       		.byte	0
+ 489 01c7 00       		.byte	0
+ 490 01c8 00       		.byte	0
+ 491 01c9 00       		.byte	0
+ 492 01ca 00       		.byte	0
+ 493 01cb 00       		.byte	0
+ 494 01cc 00       		.byte	0
+ 495 01cd 00       		.byte	0
+ 496 01ce 00       		.byte	0
+ 497 01cf 00       		.byte	0
+ 498 01d0 00       		.byte	0
+ 499 01d1 00       		.byte	0
+ 500 01d2 00       		.byte	0
+ 501 01d3 00       		.byte	0
+ 502 01d4 00       		.byte	0
+ 503 01d5 00       		.byte	0
+ 504 01d6 00       		.byte	0
+ 505 01d7 00       		.byte	0
+ 506 01d8 00       		.byte	0
+ 507 01d9 00       		.byte	0
+ 508 01da 00       		.byte	0
+ 509 01db 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 10
+
+
+ 510 01dc 00       		.byte	0
+ 511 01dd 00       		.byte	0
+ 512 01de 00       		.byte	0
+ 513 01df 00       		.byte	0
+ 514 01e0 00       		.byte	0
+ 515 01e1 00       		.byte	0
+ 516 01e2 00       		.byte	0
+ 517 01e3 00       		.byte	0
+ 518 01e4 00       		.byte	0
+ 519 01e5 00       		.byte	0
+ 520 01e6 00       		.byte	0
+ 521 01e7 00       		.byte	0
+ 522 01e8 00       		.byte	0
+ 523 01e9 00       		.byte	0
+ 524 01ea 00       		.byte	0
+ 525 01eb 00       		.byte	0
+ 526 01ec 00       		.byte	0
+ 527 01ed 00       		.byte	0
+ 528 01ee 00       		.byte	0
+ 529 01ef 00       		.byte	0
+ 530 01f0 00       		.byte	0
+ 531 01f1 00       		.byte	0
+ 532 01f2 00       		.byte	0
+ 533 01f3 00       		.byte	0
+ 534 01f4 00       		.byte	0
+ 535 01f5 00       		.byte	0
+ 536 01f6 00       		.byte	0
+ 537 01f7 00       		.byte	0
+ 538 01f8 00       		.byte	0
+ 539 01f9 00       		.byte	0
+ 540 01fa 00       		.byte	0
+ 541 01fb 00       		.byte	0
+ 542 01fc 00       		.byte	0
+ 543 01fd 00       		.byte	0
+ 544 01fe 00       		.byte	0
+ 545 01ff 00       		.byte	0
+ 546 0200 00       		.byte	0
+ 547 0201 00       		.byte	0
+ 548 0202 00       		.byte	0
+ 549 0203 00       		.byte	0
+ 550 0204 00       		.byte	0
+ 551 0205 00       		.byte	0
+ 552 0206 00       		.byte	0
+ 553 0207 00       		.byte	0
+ 554 0208 00       		.byte	0
+ 555 0209 00       		.byte	0
+ 556 020a 00       		.byte	0
+ 557 020b 00       		.byte	0
+ 558 020c 00       		.byte	0
+ 559 020d 00       		.byte	0
+ 560 020e 00       		.byte	0
+ 561 020f 00       		.byte	0
+ 562 0210 00       		.byte	0
+ 563 0211 00       		.byte	0
+ 564 0212 00       		.byte	0
+ 565 0213 00       		.byte	0
+ 566 0214 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 11
+
+
+ 567 0215 00       		.byte	0
+ 568 0216 00       		.byte	0
+ 569 0217 00       		.byte	0
+ 570 0218 00       		.byte	0
+ 571 0219 00       		.byte	0
+ 572 021a 00       		.byte	0
+ 573 021b 00       		.byte	0
+ 574 021c 00       		.byte	0
+ 575 021d 00       		.byte	0
+ 576 021e 00       		.byte	0
+ 577 021f 00       		.byte	0
+ 578 0220 00       		.byte	0
+ 579 0221 00       		.byte	0
+ 580 0222 00       		.byte	0
+ 581 0223 00       		.byte	0
+ 582 0224 00       		.byte	0
+ 583 0225 00       		.byte	0
+ 584 0226 00       		.byte	0
+ 585 0227 00       		.byte	0
+ 586 0228 00       		.byte	0
+ 587 0229 00       		.byte	0
+ 588 022a 00       		.byte	0
+ 589 022b 00       		.byte	0
+ 590 022c 00       		.byte	0
+ 591 022d 00       		.byte	0
+ 592 022e 00       		.byte	0
+ 593 022f 00       		.byte	0
+ 594 0230 00       		.byte	0
+ 595 0231 00       		.byte	0
+ 596 0232 00       		.byte	0
+ 597 0233 00       		.byte	0
+ 598 0234 00       		.byte	0
+ 599 0235 00       		.byte	0
+ 600 0236 00       		.byte	0
+ 601 0237 00       		.byte	0
+ 602 0238 00       		.byte	0
+ 603 0239 00       		.byte	0
+ 604 023a 00       		.byte	0
+ 605 023b 00       		.byte	0
+ 606 023c 00       		.byte	0
+ 607 023d 00       		.byte	0
+ 608 023e 00       		.byte	0
+ 609 023f 00       		.byte	0
+ 610 0240 00       		.byte	0
+ 611 0241 00       		.byte	0
+ 612 0242 00       		.byte	0
+ 613 0243 00       		.byte	0
+ 614 0244 00       		.byte	0
+ 615 0245 00       		.byte	0
+ 616 0246 00       		.byte	0
+ 617 0247 00       		.byte	0
+ 618 0248 00       		.byte	0
+ 619 0249 00       		.byte	0
+ 620 024a 00       		.byte	0
+ 621 024b 00       		.byte	0
+ 622 024c 00       		.byte	0
+ 623 024d 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 12
+
+
+ 624 024e 00       		.byte	0
+ 625 024f 00       		.byte	0
+ 626 0250 00       		.byte	0
+ 627 0251 00       		.byte	0
+ 628 0252 00       		.byte	0
+ 629 0253 00       		.byte	0
+ 630 0254 00       		.byte	0
+ 631 0255 00       		.byte	0
+ 632 0256 00       		.byte	0
+ 633 0257 00       		.byte	0
+ 634 0258 00       		.byte	0
+ 635 0259 00       		.byte	0
+ 636 025a 00       		.byte	0
+ 637 025b 00       		.byte	0
+ 638 025c 00       		.byte	0
+ 639 025d 00       		.byte	0
+ 640 025e 00       		.byte	0
+ 641 025f 00       		.byte	0
+ 642 0260 00       		.byte	0
+ 643 0261 00       		.byte	0
+ 644 0262 00       		.byte	0
+ 645 0263 00       		.byte	0
+ 646 0264 00       		.byte	0
+ 647 0265 00       		.byte	0
+ 648 0266 00       		.byte	0
+ 649 0267 00       		.byte	0
+ 650 0268 00       		.byte	0
+ 651 0269 00       		.byte	0
+ 652 026a 00       		.byte	0
+ 653 026b 00       		.byte	0
+ 654 026c 00       		.byte	0
+ 655 026d 00       		.byte	0
+ 656 026e 00       		.byte	0
+ 657 026f 00       		.byte	0
+ 658 0270 00       		.byte	0
+ 659 0271 00       		.byte	0
+ 660 0272 00       		.byte	0
+ 661 0273 00       		.byte	0
+ 662 0274 00       		.byte	0
+ 663 0275 00       		.byte	0
+ 664 0276 00       		.byte	0
+ 665 0277 00       		.byte	0
+ 666 0278 00       		.byte	0
+ 667 0279 00       		.byte	0
+ 668 027a 00       		.byte	0
+ 669 027b 00       		.byte	0
+ 670 027c 00       		.byte	0
+ 671 027d 00       		.byte	0
+ 672 027e 00       		.byte	0
+ 673 027f 00       		.byte	0
+ 674 0280 00       		.byte	0
+ 675 0281 00       		.byte	0
+ 676 0282 00       		.byte	0
+ 677 0283 00       		.byte	0
+ 678 0284 00       		.byte	0
+ 679 0285 00       		.byte	0
+ 680 0286 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 13
+
+
+ 681 0287 00       		.byte	0
+ 682 0288 00       		.byte	0
+ 683 0289 00       		.byte	0
+ 684 028a 00       		.byte	0
+ 685 028b 00       		.byte	0
+ 686 028c 00       		.byte	0
+ 687 028d 00       		.byte	0
+ 688 028e 00       		.byte	0
+ 689 028f 00       		.byte	0
+ 690 0290 00       		.byte	0
+ 691 0291 00       		.byte	0
+ 692 0292 00       		.byte	0
+ 693 0293 00       		.byte	0
+ 694 0294 00       		.byte	0
+ 695 0295 00       		.byte	0
+ 696 0296 00       		.byte	0
+ 697 0297 00       		.byte	0
+ 698 0298 00       		.byte	0
+ 699 0299 00       		.byte	0
+ 700 029a 00       		.byte	0
+ 701 029b 00       		.byte	0
+ 702 029c 00       		.byte	0
+ 703 029d 00       		.byte	0
+ 704 029e 00       		.byte	0
+ 705 029f 00       		.byte	0
+ 706 02a0 00       		.byte	0
+ 707 02a1 00       		.byte	0
+ 708 02a2 00       		.byte	0
+ 709 02a3 00       		.byte	0
+ 710 02a4 00       		.byte	0
+ 711 02a5 00       		.byte	0
+ 712 02a6 00       		.byte	0
+ 713 02a7 00       		.byte	0
+ 714 02a8 00       		.byte	0
+ 715 02a9 00       		.byte	0
+ 716 02aa 00       		.byte	0
+ 717 02ab 00       		.byte	0
+ 718 02ac 00       		.byte	0
+ 719 02ad 00       		.byte	0
+ 720 02ae 00       		.byte	0
+ 721 02af 00       		.byte	0
+ 722 02b0 00       		.byte	0
+ 723 02b1 00       		.byte	0
+ 724 02b2 00       		.byte	0
+ 725 02b3 00       		.byte	0
+ 726 02b4 00       		.byte	0
+ 727 02b5 00       		.byte	0
+ 728 02b6 00       		.byte	0
+ 729 02b7 00       		.byte	0
+ 730 02b8 00       		.byte	0
+ 731 02b9 00       		.byte	0
+ 732 02ba 00       		.byte	0
+ 733 02bb 00       		.byte	0
+ 734 02bc 00       		.byte	0
+ 735 02bd 00       		.byte	0
+ 736 02be 00       		.byte	0
+ 737 02bf 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 14
+
+
+ 738 02c0 00       		.byte	0
+ 739 02c1 00       		.byte	0
+ 740 02c2 00       		.byte	0
+ 741 02c3 00       		.byte	0
+ 742 02c4 00       		.byte	0
+ 743 02c5 00       		.byte	0
+ 744 02c6 00       		.byte	0
+ 745 02c7 00       		.byte	0
+ 746 02c8 00       		.byte	0
+ 747 02c9 00       		.byte	0
+ 748 02ca 00       		.byte	0
+ 749 02cb 00       		.byte	0
+ 750 02cc 00       		.byte	0
+ 751 02cd 00       		.byte	0
+ 752 02ce 00       		.byte	0
+ 753 02cf 00       		.byte	0
+ 754 02d0 00       		.byte	0
+ 755 02d1 00       		.byte	0
+ 756 02d2 00       		.byte	0
+ 757 02d3 00       		.byte	0
+ 758 02d4 00       		.byte	0
+ 759 02d5 00       		.byte	0
+ 760 02d6 00       		.byte	0
+ 761 02d7 00       		.byte	0
+ 762 02d8 00       		.byte	0
+ 763 02d9 00       		.byte	0
+ 764 02da 00       		.byte	0
+ 765 02db 00       		.byte	0
+ 766 02dc 00       		.byte	0
+ 767 02dd 00       		.byte	0
+ 768 02de 00       		.byte	0
+ 769 02df 00       		.byte	0
+ 770 02e0 00       		.byte	0
+ 771 02e1 00       		.byte	0
+ 772 02e2 00       		.byte	0
+ 773 02e3 00       		.byte	0
+ 774 02e4 00       		.byte	0
+ 775 02e5 00       		.byte	0
+ 776 02e6 00       		.byte	0
+ 777 02e7 00       		.byte	0
+ 778 02e8 00       		.byte	0
+ 779 02e9 00       		.byte	0
+ 780 02ea 00       		.byte	0
+ 781 02eb 00       		.byte	0
+ 782 02ec 00       		.byte	0
+ 783 02ed 00       		.byte	0
+ 784 02ee 00       		.byte	0
+ 785 02ef 00       		.byte	0
+ 786 02f0 00       		.byte	0
+ 787 02f1 00       		.byte	0
+ 788 02f2 00       		.byte	0
+ 789 02f3 00       		.byte	0
+ 790 02f4 00       		.byte	0
+ 791 02f5 00       		.byte	0
+ 792 02f6 00       		.byte	0
+ 793 02f7 00       		.byte	0
+ 794 02f8 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 15
+
+
+ 795 02f9 00       		.byte	0
+ 796 02fa 00       		.byte	0
+ 797 02fb 00       		.byte	0
+ 798 02fc 00       		.byte	0
+ 799 02fd 08       		.byte	8
+ 800 02fe 00       		.byte	0
+ 801 02ff 00       		.byte	0
+ 802              		.global	Droop_Filter_data_b
+ 803              		.align	2
+ 804              		.type	Droop_Filter_data_b, %object
+ 805              		.size	Droop_Filter_data_b, 512
+ 806              	Droop_Filter_data_b:
+ 807 0300 F0       		.byte	-16
+ 808 0301 FF       		.byte	-1
+ 809 0302 0F       		.byte	15
+ 810 0303 00       		.byte	0
+ 811 0304 26       		.byte	38
+ 812 0305 7F       		.byte	127
+ 813 0306 19       		.byte	25
+ 814 0307 00       		.byte	0
+ 815 0308 8C       		.byte	-116
+ 816 0309 CE       		.byte	-50
+ 817 030a 0E       		.byte	14
+ 818 030b 00       		.byte	0
+ 819 030c 1A       		.byte	26
+ 820 030d 03       		.byte	3
+ 821 030e 9A       		.byte	-102
+ 822 030f 00       		.byte	0
+ 823 0310 A3       		.byte	-93
+ 824 0311 C5       		.byte	-59
+ 825 0312 C4       		.byte	-60
+ 826 0313 00       		.byte	0
+ 827 0314 13       		.byte	19
+ 828 0315 00       		.byte	0
+ 829 0316 40       		.byte	64
+ 830 0317 00       		.byte	0
+ 831 0318 53       		.byte	83
+ 832 0319 9A       		.byte	-102
+ 833 031a 6C       		.byte	108
+ 834 031b 00       		.byte	0
+ 835 031c C8       		.byte	-56
+ 836 031d BE       		.byte	-66
+ 837 031e 3D       		.byte	61
+ 838 031f 00       		.byte	0
+ 839 0320 CC       		.byte	-52
+ 840 0321 65       		.byte	101
+ 841 0322 93       		.byte	-109
+ 842 0323 00       		.byte	0
+ 843 0324 4D       		.byte	77
+ 844 0325 41       		.byte	65
+ 845 0326 C2       		.byte	-62
+ 846 0327 00       		.byte	0
+ 847 0328 8A       		.byte	-118
+ 848 0329 FF       		.byte	-1
+ 849 032a 3F       		.byte	63
+ 850 032b 00       		.byte	0
+ 851 032c 69       		.byte	105
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 16
+
+
+ 852 032d 85       		.byte	-123
+ 853 032e 5B       		.byte	91
+ 854 032f 00       		.byte	0
+ 855 0330 57       		.byte	87
+ 856 0331 9E       		.byte	-98
+ 857 0332 3A       		.byte	58
+ 858 0333 00       		.byte	0
+ 859 0334 E8       		.byte	-24
+ 860 0335 79       		.byte	121
+ 861 0336 A4       		.byte	-92
+ 862 0337 00       		.byte	0
+ 863 0338 33       		.byte	51
+ 864 0339 61       		.byte	97
+ 865 033a C5       		.byte	-59
+ 866 033b 00       		.byte	0
+ 867 033c DA       		.byte	-38
+ 868 033d FF       		.byte	-1
+ 869 033e 3F       		.byte	63
+ 870 033f 00       		.byte	0
+ 871 0340 71       		.byte	113
+ 872 0341 26       		.byte	38
+ 873 0342 4F       		.byte	79
+ 874 0343 00       		.byte	0
+ 875 0344 E1       		.byte	-31
+ 876 0345 9F       		.byte	-97
+ 877 0346 3B       		.byte	59
+ 878 0347 00       		.byte	0
+ 879 0348 54       		.byte	84
+ 880 0349 D9       		.byte	-39
+ 881 034a B0       		.byte	-80
+ 882 034b 00       		.byte	0
+ 883 034c F5       		.byte	-11
+ 884 034d 5F       		.byte	95
+ 885 034e C4       		.byte	-60
+ 886 034f 00       		.byte	0
+ 887 0350 59       		.byte	89
+ 888 0351 00       		.byte	0
+ 889 0352 40       		.byte	64
+ 890 0353 00       		.byte	0
+ 891 0354 07       		.byte	7
+ 892 0355 47       		.byte	71
+ 893 0356 60       		.byte	96
+ 894 0357 00       		.byte	0
+ 895 0358 A9       		.byte	-87
+ 896 0359 A8       		.byte	-88
+ 897 035a 37       		.byte	55
+ 898 035b 00       		.byte	0
+ 899 035c 6A       		.byte	106
+ 900 035d B9       		.byte	-71
+ 901 035e 9F       		.byte	-97
+ 902 035f 00       		.byte	0
+ 903 0360 AD       		.byte	-83
+ 904 0361 57       		.byte	87
+ 905 0362 C8       		.byte	-56
+ 906 0363 00       		.byte	0
+ 907 0364 1D       		.byte	29
+ 908 0365 FB       		.byte	-5
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 17
+
+
+ 909 0366 3F       		.byte	63
+ 910 0367 00       		.byte	0
+ 911 0368 9D       		.byte	-99
+ 912 0369 A4       		.byte	-92
+ 913 036a 29       		.byte	41
+ 914 036b 00       		.byte	0
+ 915 036c A5       		.byte	-91
+ 916 036d 3F       		.byte	63
+ 917 036e 37       		.byte	55
+ 918 036f 00       		.byte	0
+ 919 0370 0F       		.byte	15
+ 920 0371 58       		.byte	88
+ 921 0372 D6       		.byte	-42
+ 922 0373 00       		.byte	0
+ 923 0374 66       		.byte	102
+ 924 0375 BB       		.byte	-69
+ 925 0376 C8       		.byte	-56
+ 926 0377 00       		.byte	0
+ 927 0378 6F       		.byte	111
+ 928 0379 EF       		.byte	-17
+ 929 037a 3F       		.byte	63
+ 930 037b 00       		.byte	0
+ 931 037c 80       		.byte	-128
+ 932 037d 48       		.byte	72
+ 933 037e 3B       		.byte	59
+ 934 037f 00       		.byte	0
+ 935 0380 1D       		.byte	29
+ 936 0381 A7       		.byte	-89
+ 937 0382 38       		.byte	56
+ 938 0383 00       		.byte	0
+ 939 0384 4E       		.byte	78
+ 940 0385 AA       		.byte	-86
+ 941 0386 C4       		.byte	-60
+ 942 0387 00       		.byte	0
+ 943 0388 CF       		.byte	-49
+ 944 0389 48       		.byte	72
+ 945 038a C7       		.byte	-57
+ 946 038b 00       		.byte	0
+ 947 038c 76       		.byte	118
+ 948 038d 9E       		.byte	-98
+ 949 038e 3F       		.byte	63
+ 950 038f 00       		.byte	0
+ 951 0390 8C       		.byte	-116
+ 952 0391 6B       		.byte	107
+ 953 0392 0A       		.byte	10
+ 954 0393 00       		.byte	0
+ 955 0394 43       		.byte	67
+ 956 0395 10       		.byte	16
+ 957 0396 39       		.byte	57
+ 958 0397 00       		.byte	0
+ 959 0398 E5       		.byte	-27
+ 960 0399 98       		.byte	-104
+ 961 039a F5       		.byte	-11
+ 962 039b 00       		.byte	0
+ 963 039c FF       		.byte	-1
+ 964 039d 94       		.byte	-108
+ 965 039e C6       		.byte	-58
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 18
+
+
+ 966 039f 00       		.byte	0
+ 967 03a0 53       		.byte	83
+ 968 03a1 D7       		.byte	-41
+ 969 03a2 3F       		.byte	63
+ 970 03a3 00       		.byte	0
+ 971 03a4 91       		.byte	-111
+ 972 03a5 88       		.byte	-120
+ 973 03a6 9A       		.byte	-102
+ 974 03a7 00       		.byte	0
+ 975 03a8 70       		.byte	112
+ 976 03a9 C1       		.byte	-63
+ 977 03aa 39       		.byte	57
+ 978 03ab 00       		.byte	0
+ 979 03ac 15       		.byte	21
+ 980 03ad 72       		.byte	114
+ 981 03ae 65       		.byte	101
+ 982 03af 00       		.byte	0
+ 983 03b0 C4       		.byte	-60
+ 984 03b1 84       		.byte	-124
+ 985 03b2 C6       		.byte	-58
+ 986 03b3 00       		.byte	0
+ 987 03b4 71       		.byte	113
+ 988 03b5 04       		.byte	4
+ 989 03b6 40       		.byte	64
+ 990 03b7 00       		.byte	0
+ 991 03b8 9C       		.byte	-100
+ 992 03b9 EC       		.byte	-20
+ 993 03ba B0       		.byte	-80
+ 994 03bb 00       		.byte	0
+ 995 03bc CA       		.byte	-54
+ 996 03bd 92       		.byte	-110
+ 997 03be 38       		.byte	56
+ 998 03bf 00       		.byte	0
+ 999 03c0 60       		.byte	96
+ 1000 03c1 28       		.byte	40
+ 1001 03c2 4F       		.byte	79
+ 1002 03c3 00       		.byte	0
+ 1003 03c4 99       		.byte	-103
+ 1004 03c5 5C       		.byte	92
+ 1005 03c6 C7       		.byte	-57
+ 1006 03c7 00       		.byte	0
+ 1007 03c8 30       		.byte	48
+ 1008 03c9 95       		.byte	-107
+ 1009 03ca 3F       		.byte	63
+ 1010 03cb 00       		.byte	0
+ 1011 03cc 94       		.byte	-108
+ 1012 03cd 80       		.byte	-128
+ 1013 03ce 2F       		.byte	47
+ 1014 03cf 00       		.byte	0
+ 1015 03d0 74       		.byte	116
+ 1016 03d1 D1       		.byte	-47
+ 1017 03d2 2C       		.byte	44
+ 1018 03d3 00       		.byte	0
+ 1019 03d4 05       		.byte	5
+ 1020 03d5 22       		.byte	34
+ 1021 03d6 D0       		.byte	-48
+ 1022 03d7 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 19
+
+
+ 1023 03d8 31       		.byte	49
+ 1024 03d9 9C       		.byte	-100
+ 1025 03da D2       		.byte	-46
+ 1026 03db 00       		.byte	0
+ 1027 03dc 06       		.byte	6
+ 1028 03dd 9C       		.byte	-100
+ 1029 03de 3F       		.byte	63
+ 1030 03df 00       		.byte	0
+ 1031 03e0 C2       		.byte	-62
+ 1032 03e1 40       		.byte	64
+ 1033 03e2 C2       		.byte	-62
+ 1034 03e3 00       		.byte	0
+ 1035 03e4 FA       		.byte	-6
+ 1036 03e5 A4       		.byte	-92
+ 1037 03e6 38       		.byte	56
+ 1038 03e7 00       		.byte	0
+ 1039 03e8 48       		.byte	72
+ 1040 03e9 90       		.byte	-112
+ 1041 03ea 3D       		.byte	61
+ 1042 03eb 00       		.byte	0
+ 1043 03ec 8E       		.byte	-114
+ 1044 03ed 5D       		.byte	93
+ 1045 03ee C7       		.byte	-57
+ 1046 03ef 00       		.byte	0
+ 1047 03f0 73       		.byte	115
+ 1048 03f1 3C       		.byte	60
+ 1049 03f2 3F       		.byte	63
+ 1050 03f3 00       		.byte	0
+ 1051 03f4 9D       		.byte	-99
+ 1052 03f5 77       		.byte	119
+ 1053 03f6 E2       		.byte	-30
+ 1054 03f7 00       		.byte	0
+ 1055 03f8 67       		.byte	103
+ 1056 03f9 5E       		.byte	94
+ 1057 03fa 38       		.byte	56
+ 1058 03fb 00       		.byte	0
+ 1059 03fc AA       		.byte	-86
+ 1060 03fd 33       		.byte	51
+ 1061 03fe 1E       		.byte	30
+ 1062 03ff 00       		.byte	0
+ 1063 0400 53       		.byte	83
+ 1064 0401 0F       		.byte	15
+ 1065 0402 C7       		.byte	-57
+ 1066 0403 00       		.byte	0
+ 1067 0404 46       		.byte	70
+ 1068 0405 3E       		.byte	62
+ 1069 0406 3E       		.byte	62
+ 1070 0407 00       		.byte	0
+ 1071 0408 EA       		.byte	-22
+ 1072 0409 FF       		.byte	-1
+ 1073 040a 19       		.byte	25
+ 1074 040b 00       		.byte	0
+ 1075 040c E3       		.byte	-29
+ 1076 040d 21       		.byte	33
+ 1077 040e 20       		.byte	32
+ 1078 040f 00       		.byte	0
+ 1079 0410 4B       		.byte	75
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 20
+
+
+ 1080 0411 57       		.byte	87
+ 1081 0412 E3       		.byte	-29
+ 1082 0413 00       		.byte	0
+ 1083 0414 A3       		.byte	-93
+ 1084 0415 38       		.byte	56
+ 1085 0416 DE       		.byte	-34
+ 1086 0417 00       		.byte	0
+ 1087 0418 65       		.byte	101
+ 1088 0419 E6       		.byte	-26
+ 1089 041a 3B       		.byte	59
+ 1090 041b 00       		.byte	0
+ 1091 041c 1A       		.byte	26
+ 1092 041d 54       		.byte	84
+ 1093 041e A9       		.byte	-87
+ 1094 041f 00       		.byte	0
+ 1095 0420 E5       		.byte	-27
+ 1096 0421 11       		.byte	17
+ 1097 0422 33       		.byte	51
+ 1098 0423 00       		.byte	0
+ 1099 0424 A3       		.byte	-93
+ 1100 0425 C7       		.byte	-57
+ 1101 0426 55       		.byte	85
+ 1102 0427 00       		.byte	0
+ 1103 0428 6E       		.byte	110
+ 1104 0429 43       		.byte	67
+ 1105 042a D0       		.byte	-48
+ 1106 042b 00       		.byte	0
+ 1107 042c FF       		.byte	-1
+ 1108 042d 28       		.byte	40
+ 1109 042e 40       		.byte	64
+ 1110 042f 00       		.byte	0
+ 1111 0430 77       		.byte	119
+ 1112 0431 6F       		.byte	111
+ 1113 0432 88       		.byte	-120
+ 1114 0433 00       		.byte	0
+ 1115 0434 88       		.byte	-120
+ 1116 0435 B5       		.byte	-75
+ 1117 0436 3B       		.byte	59
+ 1118 0437 00       		.byte	0
+ 1119 0438 3A       		.byte	58
+ 1120 0439 91       		.byte	-111
+ 1121 043a 77       		.byte	119
+ 1122 043b 00       		.byte	0
+ 1123 043c 58       		.byte	88
+ 1124 043d 1F       		.byte	31
+ 1125 043e C4       		.byte	-60
+ 1126 043f 00       		.byte	0
+ 1127 0440 65       		.byte	101
+ 1128 0441 60       		.byte	96
+ 1129 0442 3F       		.byte	63
+ 1130 0443 00       		.byte	0
+ 1131 0444 07       		.byte	7
+ 1132 0445 6E       		.byte	110
+ 1133 0446 08       		.byte	8
+ 1134 0447 00       		.byte	0
+ 1135 0448 98       		.byte	-104
+ 1136 0449 AC       		.byte	-84
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 21
+
+
+ 1137 044a 2C       		.byte	44
+ 1138 044b 00       		.byte	0
+ 1139 044c C7       		.byte	-57
+ 1140 044d EB       		.byte	-21
+ 1141 044e F9       		.byte	-7
+ 1142 044f 00       		.byte	0
+ 1143 0450 28       		.byte	40
+ 1144 0451 0C       		.byte	12
+ 1145 0452 D2       		.byte	-46
+ 1146 0453 00       		.byte	0
+ 1147 0454 43       		.byte	67
+ 1148 0455 D8       		.byte	-40
+ 1149 0456 3C       		.byte	60
+ 1150 0457 00       		.byte	0
+ 1151 0458 E4       		.byte	-28
+ 1152 0459 2B       		.byte	43
+ 1153 045a E9       		.byte	-23
+ 1154 045b 00       		.byte	0
+ 1155 045c 61       		.byte	97
+ 1156 045d 23       		.byte	35
+ 1157 045e 2E       		.byte	46
+ 1158 045f 00       		.byte	0
+ 1159 0460 D9       		.byte	-39
+ 1160 0461 35       		.byte	53
+ 1161 0462 12       		.byte	18
+ 1162 0463 00       		.byte	0
+ 1163 0464 A2       		.byte	-94
+ 1164 0465 B6       		.byte	-74
+ 1165 0466 DA       		.byte	-38
+ 1166 0467 00       		.byte	0
+ 1167 0468 DC       		.byte	-36
+ 1168 0469 6E       		.byte	110
+ 1169 046a 3F       		.byte	63
+ 1170 046b 00       		.byte	0
+ 1171 046c B4       		.byte	-76
+ 1172 046d 34       		.byte	52
+ 1173 046e 91       		.byte	-111
+ 1174 046f 00       		.byte	0
+ 1175 0470 8C       		.byte	-116
+ 1176 0471 D6       		.byte	-42
+ 1177 0472 36       		.byte	54
+ 1178 0473 00       		.byte	0
+ 1179 0474 26       		.byte	38
+ 1180 0475 66       		.byte	102
+ 1181 0476 6E       		.byte	110
+ 1182 0477 00       		.byte	0
+ 1183 0478 8A       		.byte	-118
+ 1184 0479 F7       		.byte	-9
+ 1185 047a C8       		.byte	-56
+ 1186 047b 00       		.byte	0
+ 1187 047c E9       		.byte	-23
+ 1188 047d A4       		.byte	-92
+ 1189 047e 3E       		.byte	62
+ 1190 047f 00       		.byte	0
+ 1191 0480 E1       		.byte	-31
+ 1192 0481 56       		.byte	86
+ 1193 0482 98       		.byte	-104
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 22
+
+
+ 1194 0483 00       		.byte	0
+ 1195 0484 C0       		.byte	-64
+ 1196 0485 82       		.byte	-126
+ 1197 0486 37       		.byte	55
+ 1198 0487 00       		.byte	0
+ 1199 0488 C3       		.byte	-61
+ 1200 0489 19       		.byte	25
+ 1201 048a 68       		.byte	104
+ 1202 048b 00       		.byte	0
+ 1203 048c 89       		.byte	-119
+ 1204 048d 0C       		.byte	12
+ 1205 048e CB       		.byte	-53
+ 1206 048f 00       		.byte	0
+ 1207 0490 3B       		.byte	59
+ 1208 0491 45       		.byte	69
+ 1209 0492 3F       		.byte	63
+ 1210 0493 00       		.byte	0
+ 1211 0494 47       		.byte	71
+ 1212 0495 25       		.byte	37
+ 1213 0496 8C       		.byte	-116
+ 1214 0497 00       		.byte	0
+ 1215 0498 F9       		.byte	-7
+ 1216 0499 BB       		.byte	-69
+ 1217 049a 3A       		.byte	58
+ 1218 049b 00       		.byte	0
+ 1219 049c DD       		.byte	-35
+ 1220 049d 27       		.byte	39
+ 1221 049e 74       		.byte	116
+ 1222 049f 00       		.byte	0
+ 1223 04a0 BA       		.byte	-70
+ 1224 04a1 66       		.byte	102
+ 1225 04a2 C6       		.byte	-58
+ 1226 04a3 00       		.byte	0
+ 1227 04a4 16       		.byte	22
+ 1228 04a5 CF       		.byte	-49
+ 1229 04a6 36       		.byte	54
+ 1230 04a7 00       		.byte	0
+ 1231 04a8 2A       		.byte	42
+ 1232 04a9 37       		.byte	55
+ 1233 04aa D9       		.byte	-39
+ 1234 04ab 00       		.byte	0
+ 1235 04ac 92       		.byte	-110
+ 1236 04ad 6B       		.byte	107
+ 1237 04ae 22       		.byte	34
+ 1238 04af 00       		.byte	0
+ 1239 04b0 81       		.byte	-127
+ 1240 04b1 91       		.byte	-111
+ 1241 04b2 1F       		.byte	31
+ 1242 04b3 00       		.byte	0
+ 1243 04b4 3B       		.byte	59
+ 1244 04b5 2F       		.byte	47
+ 1245 04b6 DB       		.byte	-37
+ 1246 04b7 00       		.byte	0
+ 1247 04b8 FE       		.byte	-2
+ 1248 04b9 F0       		.byte	-16
+ 1249 04ba 44       		.byte	68
+ 1250 04bb 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 23
+
+
+ 1251 04bc E3       		.byte	-29
+ 1252 04bd 10       		.byte	16
+ 1253 04be C0       		.byte	-64
+ 1254 04bf 00       		.byte	0
+ 1255 04c0 7C       		.byte	124
+ 1256 04c1 27       		.byte	39
+ 1257 04c2 36       		.byte	54
+ 1258 04c3 00       		.byte	0
+ 1259 04c4 9F       		.byte	-97
+ 1260 04c5 7B       		.byte	123
+ 1261 04c6 45       		.byte	69
+ 1262 04c7 00       		.byte	0
+ 1263 04c8 84       		.byte	-124
+ 1264 04c9 99       		.byte	-103
+ 1265 04ca D0       		.byte	-48
+ 1266 04cb 00       		.byte	0
+ 1267 04cc AC       		.byte	-84
+ 1268 04cd FF       		.byte	-1
+ 1269 04ce 7F       		.byte	127
+ 1270 04cf 00       		.byte	0
+ 1271 04d0 00       		.byte	0
+ 1272 04d1 00       		.byte	0
+ 1273 04d2 00       		.byte	0
+ 1274 04d3 00       		.byte	0
+ 1275 04d4 00       		.byte	0
+ 1276 04d5 00       		.byte	0
+ 1277 04d6 00       		.byte	0
+ 1278 04d7 00       		.byte	0
+ 1279 04d8 00       		.byte	0
+ 1280 04d9 00       		.byte	0
+ 1281 04da 00       		.byte	0
+ 1282 04db 00       		.byte	0
+ 1283 04dc 00       		.byte	0
+ 1284 04dd 00       		.byte	0
+ 1285 04de 00       		.byte	0
+ 1286 04df 00       		.byte	0
+ 1287 04e0 00       		.byte	0
+ 1288 04e1 00       		.byte	0
+ 1289 04e2 00       		.byte	0
+ 1290 04e3 00       		.byte	0
+ 1291 04e4 00       		.byte	0
+ 1292 04e5 00       		.byte	0
+ 1293 04e6 00       		.byte	0
+ 1294 04e7 00       		.byte	0
+ 1295 04e8 00       		.byte	0
+ 1296 04e9 00       		.byte	0
+ 1297 04ea 00       		.byte	0
+ 1298 04eb 00       		.byte	0
+ 1299 04ec 00       		.byte	0
+ 1300 04ed 00       		.byte	0
+ 1301 04ee 00       		.byte	0
+ 1302 04ef 00       		.byte	0
+ 1303 04f0 00       		.byte	0
+ 1304 04f1 00       		.byte	0
+ 1305 04f2 00       		.byte	0
+ 1306 04f3 00       		.byte	0
+ 1307 04f4 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 24
+
+
+ 1308 04f5 00       		.byte	0
+ 1309 04f6 00       		.byte	0
+ 1310 04f7 00       		.byte	0
+ 1311 04f8 00       		.byte	0
+ 1312 04f9 00       		.byte	0
+ 1313 04fa 00       		.byte	0
+ 1314 04fb 00       		.byte	0
+ 1315 04fc 00       		.byte	0
+ 1316 04fd 08       		.byte	8
+ 1317 04fe 00       		.byte	0
+ 1318 04ff 00       		.byte	0
+ 1319              		.global	Droop_Filter_acu
+ 1320              		.align	2
+ 1321              		.type	Droop_Filter_acu, %object
+ 1322              		.size	Droop_Filter_acu, 64
+ 1323              	Droop_Filter_acu:
+ 1324 0500 72       		.byte	114
+ 1325 0501 39       		.byte	57
+ 1326 0502 00       		.byte	0
+ 1327 0503 00       		.byte	0
+ 1328 0504 00       		.byte	0
+ 1329 0505 00       		.byte	0
+ 1330 0506 00       		.byte	0
+ 1331 0507 00       		.byte	0
+ 1332 0508 02       		.byte	2
+ 1333 0509 01       		.byte	1
+ 1334 050a 00       		.byte	0
+ 1335 050b 00       		.byte	0
+ 1336 050c 74       		.byte	116
+ 1337 050d 3A       		.byte	58
+ 1338 050e 00       		.byte	0
+ 1339 050f 00       		.byte	0
+ 1340 0510 F3       		.byte	-13
+ 1341 0511 39       		.byte	57
+ 1342 0512 00       		.byte	0
+ 1343 0513 00       		.byte	0
+ 1344 0514 F3       		.byte	-13
+ 1345 0515 39       		.byte	57
+ 1346 0516 00       		.byte	0
+ 1347 0517 00       		.byte	0
+ 1348 0518 7E       		.byte	126
+ 1349 0519 3F       		.byte	63
+ 1350 051a 00       		.byte	0
+ 1351 051b 00       		.byte	0
+ 1352 051c FF       		.byte	-1
+ 1353 051d 3F       		.byte	63
+ 1354 051e 00       		.byte	0
+ 1355 051f 00       		.byte	0
+ 1356 0520 00       		.byte	0
+ 1357 0521 00       		.byte	0
+ 1358 0522 00       		.byte	0
+ 1359 0523 00       		.byte	0
+ 1360 0524 00       		.byte	0
+ 1361 0525 00       		.byte	0
+ 1362 0526 00       		.byte	0
+ 1363 0527 00       		.byte	0
+ 1364 0528 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 25
+
+
+ 1365 0529 00       		.byte	0
+ 1366 052a 00       		.byte	0
+ 1367 052b 00       		.byte	0
+ 1368 052c 00       		.byte	0
+ 1369 052d 00       		.byte	0
+ 1370 052e 00       		.byte	0
+ 1371 052f 00       		.byte	0
+ 1372 0530 00       		.byte	0
+ 1373 0531 00       		.byte	0
+ 1374 0532 00       		.byte	0
+ 1375 0533 00       		.byte	0
+ 1376 0534 00       		.byte	0
+ 1377 0535 00       		.byte	0
+ 1378 0536 00       		.byte	0
+ 1379 0537 00       		.byte	0
+ 1380 0538 00       		.byte	0
+ 1381 0539 00       		.byte	0
+ 1382 053a 00       		.byte	0
+ 1383 053b 00       		.byte	0
+ 1384 053c 00       		.byte	0
+ 1385 053d 00       		.byte	0
+ 1386 053e 00       		.byte	0
+ 1387 053f 00       		.byte	0
+ 1388              		.global	Droop_Filter_cfsm
+ 1389              		.align	2
+ 1390              		.type	Droop_Filter_cfsm, %object
+ 1391              		.size	Droop_Filter_cfsm, 256
+ 1392              	Droop_Filter_cfsm:
+ 1393 0540 21       		.byte	33
+ 1394 0541 F8       		.byte	-8
+ 1395 0542 05       		.byte	5
+ 1396 0543 01       		.byte	1
+ 1397 0544 44       		.byte	68
+ 1398 0545 F8       		.byte	-8
+ 1399 0546 0B       		.byte	11
+ 1400 0547 40       		.byte	64
+ 1401 0548 67       		.byte	103
+ 1402 0549 F8       		.byte	-8
+ 1403 054a 31       		.byte	49
+ 1404 054b 80       		.byte	-128
+ 1405 054c 81       		.byte	-127
+ 1406 054d F8       		.byte	-8
+ 1407 054e 05       		.byte	5
+ 1408 054f 01       		.byte	1
+ 1409 0550 A5       		.byte	-91
+ 1410 0551 F8       		.byte	-8
+ 1411 0552 15       		.byte	21
+ 1412 0553 01       		.byte	1
+ 1413 0554 46       		.byte	70
+ 1414 0555 99       		.byte	-103
+ 1415 0556 A8       		.byte	-88
+ 1416 0557 20       		.byte	32
+ 1417 0558 E2       		.byte	-30
+ 1418 0559 F8       		.byte	-8
+ 1419 055a 07       		.byte	7
+ 1420 055b 01       		.byte	1
+ 1421 055c 09       		.byte	9
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 26
+
+
+ 1422 055d F9       		.byte	-7
+ 1423 055e 3F       		.byte	63
+ 1424 055f 01       		.byte	1
+ 1425 0560 21       		.byte	33
+ 1426 0561 F9       		.byte	-7
+ 1427 0562 05       		.byte	5
+ 1428 0563 01       		.byte	1
+ 1429 0564 E8       		.byte	-24
+ 1430 0565 FB       		.byte	-5
+ 1431 0566 B8       		.byte	-72
+ 1432 0567 21       		.byte	33
+ 1433 0568 00       		.byte	0
+ 1434 0569 00       		.byte	0
+ 1435 056a 00       		.byte	0
+ 1436 056b 00       		.byte	0
+ 1437 056c 00       		.byte	0
+ 1438 056d 00       		.byte	0
+ 1439 056e 00       		.byte	0
+ 1440 056f 00       		.byte	0
+ 1441 0570 00       		.byte	0
+ 1442 0571 00       		.byte	0
+ 1443 0572 00       		.byte	0
+ 1444 0573 00       		.byte	0
+ 1445 0574 00       		.byte	0
+ 1446 0575 00       		.byte	0
+ 1447 0576 00       		.byte	0
+ 1448 0577 00       		.byte	0
+ 1449 0578 00       		.byte	0
+ 1450 0579 00       		.byte	0
+ 1451 057a 00       		.byte	0
+ 1452 057b 00       		.byte	0
+ 1453 057c 00       		.byte	0
+ 1454 057d 00       		.byte	0
+ 1455 057e 00       		.byte	0
+ 1456 057f 00       		.byte	0
+ 1457 0580 00       		.byte	0
+ 1458 0581 00       		.byte	0
+ 1459 0582 00       		.byte	0
+ 1460 0583 00       		.byte	0
+ 1461 0584 00       		.byte	0
+ 1462 0585 00       		.byte	0
+ 1463 0586 00       		.byte	0
+ 1464 0587 00       		.byte	0
+ 1465 0588 00       		.byte	0
+ 1466 0589 00       		.byte	0
+ 1467 058a 00       		.byte	0
+ 1468 058b 00       		.byte	0
+ 1469 058c 00       		.byte	0
+ 1470 058d 00       		.byte	0
+ 1471 058e 00       		.byte	0
+ 1472 058f 00       		.byte	0
+ 1473 0590 00       		.byte	0
+ 1474 0591 00       		.byte	0
+ 1475 0592 00       		.byte	0
+ 1476 0593 00       		.byte	0
+ 1477 0594 00       		.byte	0
+ 1478 0595 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 27
+
+
+ 1479 0596 00       		.byte	0
+ 1480 0597 00       		.byte	0
+ 1481 0598 00       		.byte	0
+ 1482 0599 00       		.byte	0
+ 1483 059a 00       		.byte	0
+ 1484 059b 00       		.byte	0
+ 1485 059c 00       		.byte	0
+ 1486 059d 00       		.byte	0
+ 1487 059e 00       		.byte	0
+ 1488 059f 00       		.byte	0
+ 1489 05a0 00       		.byte	0
+ 1490 05a1 00       		.byte	0
+ 1491 05a2 00       		.byte	0
+ 1492 05a3 00       		.byte	0
+ 1493 05a4 00       		.byte	0
+ 1494 05a5 00       		.byte	0
+ 1495 05a6 00       		.byte	0
+ 1496 05a7 00       		.byte	0
+ 1497 05a8 00       		.byte	0
+ 1498 05a9 00       		.byte	0
+ 1499 05aa 00       		.byte	0
+ 1500 05ab 00       		.byte	0
+ 1501 05ac 00       		.byte	0
+ 1502 05ad 00       		.byte	0
+ 1503 05ae 00       		.byte	0
+ 1504 05af 00       		.byte	0
+ 1505 05b0 00       		.byte	0
+ 1506 05b1 00       		.byte	0
+ 1507 05b2 00       		.byte	0
+ 1508 05b3 00       		.byte	0
+ 1509 05b4 00       		.byte	0
+ 1510 05b5 00       		.byte	0
+ 1511 05b6 00       		.byte	0
+ 1512 05b7 00       		.byte	0
+ 1513 05b8 00       		.byte	0
+ 1514 05b9 00       		.byte	0
+ 1515 05ba 00       		.byte	0
+ 1516 05bb 00       		.byte	0
+ 1517 05bc 00       		.byte	0
+ 1518 05bd 00       		.byte	0
+ 1519 05be 00       		.byte	0
+ 1520 05bf 00       		.byte	0
+ 1521 05c0 00       		.byte	0
+ 1522 05c1 00       		.byte	0
+ 1523 05c2 00       		.byte	0
+ 1524 05c3 00       		.byte	0
+ 1525 05c4 00       		.byte	0
+ 1526 05c5 00       		.byte	0
+ 1527 05c6 00       		.byte	0
+ 1528 05c7 00       		.byte	0
+ 1529 05c8 00       		.byte	0
+ 1530 05c9 00       		.byte	0
+ 1531 05ca 00       		.byte	0
+ 1532 05cb 00       		.byte	0
+ 1533 05cc 00       		.byte	0
+ 1534 05cd 00       		.byte	0
+ 1535 05ce 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 28
+
+
+ 1536 05cf 00       		.byte	0
+ 1537 05d0 00       		.byte	0
+ 1538 05d1 00       		.byte	0
+ 1539 05d2 00       		.byte	0
+ 1540 05d3 00       		.byte	0
+ 1541 05d4 00       		.byte	0
+ 1542 05d5 00       		.byte	0
+ 1543 05d6 00       		.byte	0
+ 1544 05d7 00       		.byte	0
+ 1545 05d8 00       		.byte	0
+ 1546 05d9 00       		.byte	0
+ 1547 05da 00       		.byte	0
+ 1548 05db 00       		.byte	0
+ 1549 05dc 00       		.byte	0
+ 1550 05dd 00       		.byte	0
+ 1551 05de 00       		.byte	0
+ 1552 05df 00       		.byte	0
+ 1553 05e0 00       		.byte	0
+ 1554 05e1 00       		.byte	0
+ 1555 05e2 00       		.byte	0
+ 1556 05e3 00       		.byte	0
+ 1557 05e4 00       		.byte	0
+ 1558 05e5 00       		.byte	0
+ 1559 05e6 00       		.byte	0
+ 1560 05e7 00       		.byte	0
+ 1561 05e8 00       		.byte	0
+ 1562 05e9 00       		.byte	0
+ 1563 05ea 00       		.byte	0
+ 1564 05eb 00       		.byte	0
+ 1565 05ec 00       		.byte	0
+ 1566 05ed 00       		.byte	0
+ 1567 05ee 00       		.byte	0
+ 1568 05ef 00       		.byte	0
+ 1569 05f0 00       		.byte	0
+ 1570 05f1 00       		.byte	0
+ 1571 05f2 00       		.byte	0
+ 1572 05f3 00       		.byte	0
+ 1573 05f4 00       		.byte	0
+ 1574 05f5 00       		.byte	0
+ 1575 05f6 00       		.byte	0
+ 1576 05f7 00       		.byte	0
+ 1577 05f8 00       		.byte	0
+ 1578 05f9 00       		.byte	0
+ 1579 05fa 00       		.byte	0
+ 1580 05fb 00       		.byte	0
+ 1581 05fc 00       		.byte	0
+ 1582 05fd 00       		.byte	0
+ 1583 05fe 00       		.byte	0
+ 1584 05ff 00       		.byte	0
+ 1585 0600 00       		.byte	0
+ 1586 0601 00       		.byte	0
+ 1587 0602 00       		.byte	0
+ 1588 0603 00       		.byte	0
+ 1589 0604 00       		.byte	0
+ 1590 0605 00       		.byte	0
+ 1591 0606 00       		.byte	0
+ 1592 0607 00       		.byte	0
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 29
+
+
+ 1593 0608 00       		.byte	0
+ 1594 0609 00       		.byte	0
+ 1595 060a 00       		.byte	0
+ 1596 060b 00       		.byte	0
+ 1597 060c 00       		.byte	0
+ 1598 060d 00       		.byte	0
+ 1599 060e 00       		.byte	0
+ 1600 060f 00       		.byte	0
+ 1601 0610 00       		.byte	0
+ 1602 0611 00       		.byte	0
+ 1603 0612 00       		.byte	0
+ 1604 0613 00       		.byte	0
+ 1605 0614 00       		.byte	0
+ 1606 0615 00       		.byte	0
+ 1607 0616 00       		.byte	0
+ 1608 0617 00       		.byte	0
+ 1609 0618 00       		.byte	0
+ 1610 0619 00       		.byte	0
+ 1611 061a 00       		.byte	0
+ 1612 061b 00       		.byte	0
+ 1613 061c 00       		.byte	0
+ 1614 061d 00       		.byte	0
+ 1615 061e 00       		.byte	0
+ 1616 061f 00       		.byte	0
+ 1617 0620 00       		.byte	0
+ 1618 0621 00       		.byte	0
+ 1619 0622 00       		.byte	0
+ 1620 0623 00       		.byte	0
+ 1621 0624 00       		.byte	0
+ 1622 0625 00       		.byte	0
+ 1623 0626 00       		.byte	0
+ 1624 0627 00       		.byte	0
+ 1625 0628 00       		.byte	0
+ 1626 0629 00       		.byte	0
+ 1627 062a 00       		.byte	0
+ 1628 062b 00       		.byte	0
+ 1629 062c 00       		.byte	0
+ 1630 062d 00       		.byte	0
+ 1631 062e 00       		.byte	0
+ 1632 062f 00       		.byte	0
+ 1633 0630 00       		.byte	0
+ 1634 0631 00       		.byte	0
+ 1635 0632 00       		.byte	0
+ 1636 0633 00       		.byte	0
+ 1637 0634 00       		.byte	0
+ 1638 0635 00       		.byte	0
+ 1639 0636 00       		.byte	0
+ 1640 0637 00       		.byte	0
+ 1641 0638 00       		.byte	0
+ 1642 0639 00       		.byte	0
+ 1643 063a 00       		.byte	0
+ 1644 063b 00       		.byte	0
+ 1645 063c 00       		.byte	0
+ 1646 063d 00       		.byte	0
+ 1647 063e 00       		.byte	0
+ 1648 063f 00       		.byte	0
+ 1649              		.text
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 30
+
+
+ 1650              	.Letext0:
+ 1651              		.file 1 ".\\Generated_Source\\PSoC5\\Droop_Filter_RAM_Data.c"
+ 1652              		.file 2 ".\\Generated_Source\\PSoC5\\/cytypes.h"
+ 1653              		.section	.debug_info
+ 1654 0000 2F010000 		.4byte	0x12f
+ 1655 0004 0200     		.2byte	0x2
+ 1656 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 1657 000a 04       		.byte	0x4
+ 1658 000b 01       		.uleb128 0x1
+ 1659 000c 71000000 		.4byte	.LASF17
+ 1660 0010 01       		.byte	0x1
+ 1661 0011 A2000000 		.4byte	.LASF18
+ 1662 0015 F7000000 		.4byte	.LASF19
+ 1663 0019 00000000 		.4byte	.Ltext0
+ 1664 001d 00000000 		.4byte	.Letext0
+ 1665 0021 00000000 		.4byte	.Ldebug_line0
+ 1666 0025 02       		.uleb128 0x2
+ 1667 0026 01       		.byte	0x1
+ 1668 0027 06       		.byte	0x6
+ 1669 0028 72010000 		.4byte	.LASF0
+ 1670 002c 02       		.uleb128 0x2
+ 1671 002d 01       		.byte	0x1
+ 1672 002e 08       		.byte	0x8
+ 1673 002f 7D000000 		.4byte	.LASF1
+ 1674 0033 02       		.uleb128 0x2
+ 1675 0034 02       		.byte	0x2
+ 1676 0035 05       		.byte	0x5
+ 1677 0036 99010000 		.4byte	.LASF2
+ 1678 003a 02       		.uleb128 0x2
+ 1679 003b 02       		.byte	0x2
+ 1680 003c 07       		.byte	0x7
+ 1681 003d 0E000000 		.4byte	.LASF3
+ 1682 0041 03       		.uleb128 0x3
+ 1683 0042 04       		.byte	0x4
+ 1684 0043 05       		.byte	0x5
+ 1685 0044 696E7400 		.ascii	"int\000"
+ 1686 0048 02       		.uleb128 0x2
+ 1687 0049 04       		.byte	0x4
+ 1688 004a 07       		.byte	0x7
+ 1689 004b 35000000 		.4byte	.LASF4
+ 1690 004f 02       		.uleb128 0x2
+ 1691 0050 08       		.byte	0x8
+ 1692 0051 05       		.byte	0x5
+ 1693 0052 00000000 		.4byte	.LASF5
+ 1694 0056 02       		.uleb128 0x2
+ 1695 0057 08       		.byte	0x8
+ 1696 0058 07       		.byte	0x7
+ 1697 0059 5A000000 		.4byte	.LASF6
+ 1698 005d 02       		.uleb128 0x2
+ 1699 005e 04       		.byte	0x4
+ 1700 005f 05       		.byte	0x5
+ 1701 0060 E7000000 		.4byte	.LASF7
+ 1702 0064 04       		.uleb128 0x4
+ 1703 0065 04       		.byte	0x4
+ 1704 0066 07       		.byte	0x7
+ 1705 0067 02       		.uleb128 0x2
+ 1706 0068 04       		.byte	0x4
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 31
+
+
+ 1707 0069 07       		.byte	0x7
+ 1708 006a 48000000 		.4byte	.LASF8
+ 1709 006e 02       		.uleb128 0x2
+ 1710 006f 01       		.byte	0x1
+ 1711 0070 08       		.byte	0x8
+ 1712 0071 9D000000 		.4byte	.LASF9
+ 1713 0075 05       		.uleb128 0x5
+ 1714 0076 42000000 		.4byte	.LASF20
+ 1715 007a 02       		.byte	0x2
+ 1716 007b 4C       		.byte	0x4c
+ 1717 007c 2C000000 		.4byte	0x2c
+ 1718 0080 02       		.uleb128 0x2
+ 1719 0081 04       		.byte	0x4
+ 1720 0082 04       		.byte	0x4
+ 1721 0083 93010000 		.4byte	.LASF10
+ 1722 0087 02       		.uleb128 0x2
+ 1723 0088 08       		.byte	0x8
+ 1724 0089 04       		.byte	0x4
+ 1725 008a F0000000 		.4byte	.LASF11
+ 1726 008e 06       		.uleb128 0x6
+ 1727 008f 75000000 		.4byte	0x75
+ 1728 0093 9E000000 		.4byte	0x9e
+ 1729 0097 07       		.uleb128 0x7
+ 1730 0098 64000000 		.4byte	0x64
+ 1731 009c FF       		.byte	0xff
+ 1732 009d 00       		.byte	0x0
+ 1733 009e 08       		.uleb128 0x8
+ 1734 009f 7E010000 		.4byte	.LASF12
+ 1735 00a3 01       		.byte	0x1
+ 1736 00a4 04       		.byte	0x4
+ 1737 00a5 B0000000 		.4byte	0xb0
+ 1738 00a9 01       		.byte	0x1
+ 1739 00aa 05       		.byte	0x5
+ 1740 00ab 03       		.byte	0x3
+ 1741 00ac 00000000 		.4byte	Droop_Filter_control
+ 1742 00b0 09       		.uleb128 0x9
+ 1743 00b1 8E000000 		.4byte	0x8e
+ 1744 00b5 06       		.uleb128 0x6
+ 1745 00b6 75000000 		.4byte	0x75
+ 1746 00ba C6000000 		.4byte	0xc6
+ 1747 00be 0A       		.uleb128 0xa
+ 1748 00bf 64000000 		.4byte	0x64
+ 1749 00c3 FF01     		.2byte	0x1ff
+ 1750 00c5 00       		.byte	0x0
+ 1751 00c6 08       		.uleb128 0x8
+ 1752 00c7 21000000 		.4byte	.LASF13
+ 1753 00cb 01       		.byte	0x1
+ 1754 00cc 28       		.byte	0x28
+ 1755 00cd D8000000 		.4byte	0xd8
+ 1756 00d1 01       		.byte	0x1
+ 1757 00d2 05       		.byte	0x5
+ 1758 00d3 03       		.byte	0x3
+ 1759 00d4 00000000 		.4byte	Droop_Filter_data_a
+ 1760 00d8 09       		.uleb128 0x9
+ 1761 00d9 B5000000 		.4byte	0xb5
+ 1762 00dd 08       		.uleb128 0x8
+ 1763 00de D3000000 		.4byte	.LASF14
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 32
+
+
+ 1764 00e2 01       		.byte	0x1
+ 1765 00e3 6C       		.byte	0x6c
+ 1766 00e4 EF000000 		.4byte	0xef
+ 1767 00e8 01       		.byte	0x1
+ 1768 00e9 05       		.byte	0x5
+ 1769 00ea 03       		.byte	0x3
+ 1770 00eb 00000000 		.4byte	Droop_Filter_data_b
+ 1771 00ef 09       		.uleb128 0x9
+ 1772 00f0 B5000000 		.4byte	0xb5
+ 1773 00f4 08       		.uleb128 0x8
+ 1774 00f5 8B000000 		.4byte	.LASF15
+ 1775 00f9 01       		.byte	0x1
+ 1776 00fa BC       		.byte	0xbc
+ 1777 00fb 06010000 		.4byte	0x106
+ 1778 00ff 01       		.byte	0x1
+ 1779 0100 05       		.byte	0x5
+ 1780 0101 03       		.byte	0x3
+ 1781 0102 00000000 		.4byte	Droop_Filter_cfsm
+ 1782 0106 09       		.uleb128 0x9
+ 1783 0107 8E000000 		.4byte	0x8e
+ 1784 010b 06       		.uleb128 0x6
+ 1785 010c 75000000 		.4byte	0x75
+ 1786 0110 1B010000 		.4byte	0x11b
+ 1787 0114 07       		.uleb128 0x7
+ 1788 0115 64000000 		.4byte	0x64
+ 1789 0119 3F       		.byte	0x3f
+ 1790 011a 00       		.byte	0x0
+ 1791 011b 08       		.uleb128 0x8
+ 1792 011c A3010000 		.4byte	.LASF16
+ 1793 0120 01       		.byte	0x1
+ 1794 0121 B0       		.byte	0xb0
+ 1795 0122 2D010000 		.4byte	0x12d
+ 1796 0126 01       		.byte	0x1
+ 1797 0127 05       		.byte	0x5
+ 1798 0128 03       		.byte	0x3
+ 1799 0129 00000000 		.4byte	Droop_Filter_acu
+ 1800 012d 09       		.uleb128 0x9
+ 1801 012e 0B010000 		.4byte	0x10b
+ 1802 0132 00       		.byte	0x0
+ 1803              		.section	.debug_abbrev
+ 1804 0000 01       		.uleb128 0x1
+ 1805 0001 11       		.uleb128 0x11
+ 1806 0002 01       		.byte	0x1
+ 1807 0003 25       		.uleb128 0x25
+ 1808 0004 0E       		.uleb128 0xe
+ 1809 0005 13       		.uleb128 0x13
+ 1810 0006 0B       		.uleb128 0xb
+ 1811 0007 03       		.uleb128 0x3
+ 1812 0008 0E       		.uleb128 0xe
+ 1813 0009 1B       		.uleb128 0x1b
+ 1814 000a 0E       		.uleb128 0xe
+ 1815 000b 11       		.uleb128 0x11
+ 1816 000c 01       		.uleb128 0x1
+ 1817 000d 12       		.uleb128 0x12
+ 1818 000e 01       		.uleb128 0x1
+ 1819 000f 10       		.uleb128 0x10
+ 1820 0010 06       		.uleb128 0x6
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 33
+
+
+ 1821 0011 00       		.byte	0x0
+ 1822 0012 00       		.byte	0x0
+ 1823 0013 02       		.uleb128 0x2
+ 1824 0014 24       		.uleb128 0x24
+ 1825 0015 00       		.byte	0x0
+ 1826 0016 0B       		.uleb128 0xb
+ 1827 0017 0B       		.uleb128 0xb
+ 1828 0018 3E       		.uleb128 0x3e
+ 1829 0019 0B       		.uleb128 0xb
+ 1830 001a 03       		.uleb128 0x3
+ 1831 001b 0E       		.uleb128 0xe
+ 1832 001c 00       		.byte	0x0
+ 1833 001d 00       		.byte	0x0
+ 1834 001e 03       		.uleb128 0x3
+ 1835 001f 24       		.uleb128 0x24
+ 1836 0020 00       		.byte	0x0
+ 1837 0021 0B       		.uleb128 0xb
+ 1838 0022 0B       		.uleb128 0xb
+ 1839 0023 3E       		.uleb128 0x3e
+ 1840 0024 0B       		.uleb128 0xb
+ 1841 0025 03       		.uleb128 0x3
+ 1842 0026 08       		.uleb128 0x8
+ 1843 0027 00       		.byte	0x0
+ 1844 0028 00       		.byte	0x0
+ 1845 0029 04       		.uleb128 0x4
+ 1846 002a 24       		.uleb128 0x24
+ 1847 002b 00       		.byte	0x0
+ 1848 002c 0B       		.uleb128 0xb
+ 1849 002d 0B       		.uleb128 0xb
+ 1850 002e 3E       		.uleb128 0x3e
+ 1851 002f 0B       		.uleb128 0xb
+ 1852 0030 00       		.byte	0x0
+ 1853 0031 00       		.byte	0x0
+ 1854 0032 05       		.uleb128 0x5
+ 1855 0033 16       		.uleb128 0x16
+ 1856 0034 00       		.byte	0x0
+ 1857 0035 03       		.uleb128 0x3
+ 1858 0036 0E       		.uleb128 0xe
+ 1859 0037 3A       		.uleb128 0x3a
+ 1860 0038 0B       		.uleb128 0xb
+ 1861 0039 3B       		.uleb128 0x3b
+ 1862 003a 0B       		.uleb128 0xb
+ 1863 003b 49       		.uleb128 0x49
+ 1864 003c 13       		.uleb128 0x13
+ 1865 003d 00       		.byte	0x0
+ 1866 003e 00       		.byte	0x0
+ 1867 003f 06       		.uleb128 0x6
+ 1868 0040 01       		.uleb128 0x1
+ 1869 0041 01       		.byte	0x1
+ 1870 0042 49       		.uleb128 0x49
+ 1871 0043 13       		.uleb128 0x13
+ 1872 0044 01       		.uleb128 0x1
+ 1873 0045 13       		.uleb128 0x13
+ 1874 0046 00       		.byte	0x0
+ 1875 0047 00       		.byte	0x0
+ 1876 0048 07       		.uleb128 0x7
+ 1877 0049 21       		.uleb128 0x21
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 34
+
+
+ 1878 004a 00       		.byte	0x0
+ 1879 004b 49       		.uleb128 0x49
+ 1880 004c 13       		.uleb128 0x13
+ 1881 004d 2F       		.uleb128 0x2f
+ 1882 004e 0B       		.uleb128 0xb
+ 1883 004f 00       		.byte	0x0
+ 1884 0050 00       		.byte	0x0
+ 1885 0051 08       		.uleb128 0x8
+ 1886 0052 34       		.uleb128 0x34
+ 1887 0053 00       		.byte	0x0
+ 1888 0054 03       		.uleb128 0x3
+ 1889 0055 0E       		.uleb128 0xe
+ 1890 0056 3A       		.uleb128 0x3a
+ 1891 0057 0B       		.uleb128 0xb
+ 1892 0058 3B       		.uleb128 0x3b
+ 1893 0059 0B       		.uleb128 0xb
+ 1894 005a 49       		.uleb128 0x49
+ 1895 005b 13       		.uleb128 0x13
+ 1896 005c 3F       		.uleb128 0x3f
+ 1897 005d 0C       		.uleb128 0xc
+ 1898 005e 02       		.uleb128 0x2
+ 1899 005f 0A       		.uleb128 0xa
+ 1900 0060 00       		.byte	0x0
+ 1901 0061 00       		.byte	0x0
+ 1902 0062 09       		.uleb128 0x9
+ 1903 0063 26       		.uleb128 0x26
+ 1904 0064 00       		.byte	0x0
+ 1905 0065 49       		.uleb128 0x49
+ 1906 0066 13       		.uleb128 0x13
+ 1907 0067 00       		.byte	0x0
+ 1908 0068 00       		.byte	0x0
+ 1909 0069 0A       		.uleb128 0xa
+ 1910 006a 21       		.uleb128 0x21
+ 1911 006b 00       		.byte	0x0
+ 1912 006c 49       		.uleb128 0x49
+ 1913 006d 13       		.uleb128 0x13
+ 1914 006e 2F       		.uleb128 0x2f
+ 1915 006f 05       		.uleb128 0x5
+ 1916 0070 00       		.byte	0x0
+ 1917 0071 00       		.byte	0x0
+ 1918 0072 00       		.byte	0x0
+ 1919              		.section	.debug_pubnames,"",%progbits
+ 1920 0000 82000000 		.4byte	0x82
+ 1921 0004 0200     		.2byte	0x2
+ 1922 0006 00000000 		.4byte	.Ldebug_info0
+ 1923 000a 33010000 		.4byte	0x133
+ 1924 000e 9E000000 		.4byte	0x9e
+ 1925 0012 44726F6F 		.ascii	"Droop_Filter_control\000"
+ 1925      705F4669 
+ 1925      6C746572 
+ 1925      5F636F6E 
+ 1925      74726F6C 
+ 1926 0027 C6000000 		.4byte	0xc6
+ 1927 002b 44726F6F 		.ascii	"Droop_Filter_data_a\000"
+ 1927      705F4669 
+ 1927      6C746572 
+ 1927      5F646174 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 35
+
+
+ 1927      615F6100 
+ 1928 003f DD000000 		.4byte	0xdd
+ 1929 0043 44726F6F 		.ascii	"Droop_Filter_data_b\000"
+ 1929      705F4669 
+ 1929      6C746572 
+ 1929      5F646174 
+ 1929      615F6200 
+ 1930 0057 F4000000 		.4byte	0xf4
+ 1931 005b 44726F6F 		.ascii	"Droop_Filter_cfsm\000"
+ 1931      705F4669 
+ 1931      6C746572 
+ 1931      5F636673 
+ 1931      6D00
+ 1932 006d 1B010000 		.4byte	0x11b
+ 1933 0071 44726F6F 		.ascii	"Droop_Filter_acu\000"
+ 1933      705F4669 
+ 1933      6C746572 
+ 1933      5F616375 
+ 1933      00
+ 1934 0082 00000000 		.4byte	0x0
+ 1935              		.section	.debug_str,"MS",%progbits,1
+ 1936              	.LASF5:
+ 1937 0000 6C6F6E67 		.ascii	"long long int\000"
+ 1937      206C6F6E 
+ 1937      6720696E 
+ 1937      7400
+ 1938              	.LASF3:
+ 1939 000e 73686F72 		.ascii	"short unsigned int\000"
+ 1939      7420756E 
+ 1939      7369676E 
+ 1939      65642069 
+ 1939      6E7400
+ 1940              	.LASF13:
+ 1941 0021 44726F6F 		.ascii	"Droop_Filter_data_a\000"
+ 1941      705F4669 
+ 1941      6C746572 
+ 1941      5F646174 
+ 1941      615F6100 
+ 1942              	.LASF4:
+ 1943 0035 756E7369 		.ascii	"unsigned int\000"
+ 1943      676E6564 
+ 1943      20696E74 
+ 1943      00
+ 1944              	.LASF20:
+ 1945 0042 75696E74 		.ascii	"uint8\000"
+ 1945      3800
+ 1946              	.LASF8:
+ 1947 0048 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1947      20756E73 
+ 1947      69676E65 
+ 1947      6420696E 
+ 1947      7400
+ 1948              	.LASF6:
+ 1949 005a 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1949      206C6F6E 
+ 1949      6720756E 
+ 1949      7369676E 
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 36
+
+
+ 1949      65642069 
+ 1950              	.LASF17:
+ 1951 0071 474E5520 		.ascii	"GNU C 4.4.1\000"
+ 1951      4320342E 
+ 1951      342E3100 
+ 1952              	.LASF1:
+ 1953 007d 756E7369 		.ascii	"unsigned char\000"
+ 1953      676E6564 
+ 1953      20636861 
+ 1953      7200
+ 1954              	.LASF15:
+ 1955 008b 44726F6F 		.ascii	"Droop_Filter_cfsm\000"
+ 1955      705F4669 
+ 1955      6C746572 
+ 1955      5F636673 
+ 1955      6D00
+ 1956              	.LASF9:
+ 1957 009d 63686172 		.ascii	"char\000"
+ 1957      00
+ 1958              	.LASF18:
+ 1959 00a2 2E5C4765 		.ascii	".\\Generated_Source\\PSoC5\\Droop_Filter_RAM_Data.c"
+ 1959      6E657261 
+ 1959      7465645F 
+ 1959      536F7572 
+ 1959      63655C50 
+ 1960 00d2 00       		.ascii	"\000"
+ 1961              	.LASF14:
+ 1962 00d3 44726F6F 		.ascii	"Droop_Filter_data_b\000"
+ 1962      705F4669 
+ 1962      6C746572 
+ 1962      5F646174 
+ 1962      615F6200 
+ 1963              	.LASF7:
+ 1964 00e7 6C6F6E67 		.ascii	"long int\000"
+ 1964      20696E74 
+ 1964      00
+ 1965              	.LASF11:
+ 1966 00f0 646F7562 		.ascii	"double\000"
+ 1966      6C6500
+ 1967              	.LASF19:
+ 1968 00f7 5A3A5C55 		.ascii	"Z:\\Users\\Charlie\\Documents\\devel\\sonyc\\sonycm"
+ 1968      73657273 
+ 1968      5C436861 
+ 1968      726C6965 
+ 1968      5C446F63 
+ 1969 0124 69635C70 		.ascii	"ic\\psoc5LP_firmware\\PioneerKit_P5LP_USB_Audio\\Pi"
+ 1969      736F6335 
+ 1969      4C505F66 
+ 1969      69726D77 
+ 1969      6172655C 
+ 1970 0154 6F6E6565 		.ascii	"oneerKit_P5LP_USB_Audio.cydsn\000"
+ 1970      724B6974 
+ 1970      5F50354C 
+ 1970      505F5553 
+ 1970      425F4175 
+ 1971              	.LASF0:
+ 1972 0172 7369676E 		.ascii	"signed char\000"
+ARM GAS  C:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\ccMSad0j.s 			page 37
+
+
+ 1972      65642063 
+ 1972      68617200 
+ 1973              	.LASF12:
+ 1974 017e 44726F6F 		.ascii	"Droop_Filter_control\000"
+ 1974      705F4669 
+ 1974      6C746572 
+ 1974      5F636F6E 
+ 1974      74726F6C 
+ 1975              	.LASF10:
+ 1976 0193 666C6F61 		.ascii	"float\000"
+ 1976      7400
+ 1977              	.LASF2:
+ 1978 0199 73686F72 		.ascii	"short int\000"
+ 1978      7420696E 
+ 1978      7400
+ 1979              	.LASF16:
+ 1980 01a3 44726F6F 		.ascii	"Droop_Filter_acu\000"
+ 1980      705F4669 
+ 1980      6C746572 
+ 1980      5F616375 
+ 1980      00
+ 1981              		.ident	"GCC: (Sourcery G++ Lite 2010q1-188) 4.4.1"

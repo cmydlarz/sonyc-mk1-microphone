@@ -1,0 +1,85 @@
+*
+*
+G04 PADS Layout (Build Number 2008.43.1) generated Gerber (RS-274-X) file*
+G04 PC Version=2.1*
+*
+%IN "digital MEMs USB v103.p"*%
+*
+%MOIN*%
+*
+%FSLAX35Y35*%
+*
+*
+*
+*
+G04 PC Standard Apertures*
+*
+*
+G04 Thermal Relief Aperture macro.*
+%AMTER*
+1,1,$1,0,0*
+1,0,$1-$2,0,0*
+21,0,$3,$4,0,0,45*
+21,0,$3,$4,0,0,135*
+%
+*
+*
+G04 Annular Aperture macro.*
+%AMANN*
+1,1,$1,0,0*
+1,0,$2,0,0*
+%
+*
+*
+G04 Odd Aperture macro.*
+%AMODD*
+1,1,$1,0,0*
+1,0,$1-0.005,0,0*
+%
+*
+*
+G04 PC Custom Aperture Macros*
+*
+*
+*
+*
+*
+*
+G04 PC Aperture Table*
+*
+%ADD010C,0.001*%
+%ADD069C,0.16748*%
+%ADD080C,0.05331*%
+*
+*
+*
+*
+G04 PC Circuitry*
+G04 Layer Name digital MEMs USB v103.p - circuitry*
+%LPD*%
+*
+*
+G04 PC Custom Flashes*
+G04 Layer Name digital MEMs USB v103.p - flashes*
+%LPD*%
+*
+*
+G04 PC Circuitry*
+G04 Layer Name digital MEMs USB v103.p - circuitry*
+%LPD*%
+*
+G54D10*
+G54D69*
+G01X111811Y186614D03*
+X186614D03*
+Y111811D03*
+X111811D03*
+G54D80*
+X130906Y158858D02*
+X128150D01*
+X108858D02*
+X106102D01*
+X120669Y167323D02*
+X116339D01*
+X0Y0D02*
+M02*
